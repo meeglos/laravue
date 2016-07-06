@@ -11,6 +11,24 @@
 |
 */
 
+use App\Note;
+use Illuminate\Routing\Route;
+
+
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('notes', function() {
+    $notes = Note::all();
+    return view('notes', compact('notes'));
+});
+
+Route::get('notes/create', function() {
+//    $notes = Note::all();
+    return '[Create notes]';
+});
+
+Route::get('notes/{note}', function($note) {
+   return $note;
+})->where('note', '[0-9]+');
