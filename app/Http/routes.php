@@ -11,9 +11,8 @@
 |
 */
 
-use App\Note;
-use Illuminate\Routing\Route;
 
+use App\Note;
 
 Route::get('/', function () {
     return view('welcome');

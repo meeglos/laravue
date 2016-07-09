@@ -6,12 +6,12 @@
 <body>
     <h2>Notes</h2>
     <hr>
-    <ul>
+    <ol>
         @foreach ($notes as $note)
         <li>
             {{ $note->note }}
         </li>
         @endforeach
-    </ul>
+    </ol>
 </body>
 </html>
